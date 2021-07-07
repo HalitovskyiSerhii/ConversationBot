@@ -1,0 +1,54 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - help
+  - download_image
+  - save_doc
+
+actions:
+  - action_download_image
+  - action_save_doc
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_help:
+    - text: "I can get you image by the link or store your docs. Just send me it!"
+
+  utter_somthing_wrong:
+    - text: "Sorry, something go wrong."
+
+  utter_verify:
+    - text: "Is it right image?"
+
+entities:
+  - url_link
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

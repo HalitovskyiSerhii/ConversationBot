@@ -1,0 +1,25 @@
+version: "2.0"
+
+stories:
+
+- story: help path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+
+
+- story: download path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: download_image
+  - action: action_download_image
+
+- story: save path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: save_doc
+  - action: action_save_doc
